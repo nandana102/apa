@@ -1,7 +1,7 @@
 #!/usr/bin/python2
 # coding: UTF-8
 # coded by Tegar ID
-# 22 november 2020
+# 15 january 2003 contoh
 # open source
 import requests, json, os, sys, random
 
@@ -53,9 +53,9 @@ def input():
 def nutriclub():
   h = requests.post("https://www.nutriclub.co.id/otp/?phone=0"+nom+"&old_phone=0"+nom,headers={'user-agent':'Mozilla/5.0 (Linux; Android 9; vivo 1902) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36'})
   if json.loads(h.text)["StatusMessage"] == 'Request misscall berhasil':
-   sukses("✔","call","nutriclub")
+   sukses("✔","sms","nutriclub")
   else:
-   gagal("✖","call","nutriclub")
+   gagal("✖","sms","nutriclub")
 
 
 if __name__ == '__main__':
