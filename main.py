@@ -31,8 +31,8 @@ def logo():
         \/|__|       \/      \/          \/     \/
 
 
-                     [\033[41;1m Author : Tegar ID \033[00;1m\033[37;1m]
-                    \033[31;1m[\033[47;1m Dunia Kode Developer \033[00;1m\033[31;1m]
+                     [\033[41;1m Author : nandana 102 \033[00;1m\033[37;1m]
+                    \033[31;1m[\033[47;1m nandana \033[00;1m\033[31;1m]
         \033[00;1m
     """
 
@@ -51,7 +51,7 @@ def input():
     main()
 
 def nutriclub():
-  h = requests.post("https://www.nutriclub.co.id/otp/?phone=0"+nom+"&old_phone=0"+nom,headers={'user-agent':'Mozilla/5.0 (Linux; Android 9; vivo 1902) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36'})
+  h = requests.post("https://www.my.telkomsel.com/otp/?phone=0"+nom+"&old_phone=0"+nom,headers={'user-agent':'Mozilla/5.0 (Linux; Android 9; vivo 1902) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.136 Mobile Safari/537.36'})
   if json.loads(h.text)["StatusMessage"] == 'Request misscall berhasil':
    sukses("✔","sms","nutriclub")
   else:
